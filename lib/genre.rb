@@ -19,13 +19,11 @@ class Genre
   end
 
   def artists
-    collection = []
+    artists_in_genre = []
 
-    songs.each do |song|
-      collection << song.artist if !collection.include?(song.artist)
-    end
-
-    collection
+    songs.each{|song| artists_in_genre << song.artist if !artists_in_genre.include?(song.artist)}
+    
+    artists_in_genre
   end
 
   def save
