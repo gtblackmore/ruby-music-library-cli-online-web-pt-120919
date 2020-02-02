@@ -1,4 +1,4 @@
-require "concerns"
+require 'concerns'
 
 class Genre
     attr_accessor :name, :songs
