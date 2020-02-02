@@ -5,11 +5,11 @@ module Concerns
     end
 
     def find_or_create_by_name(name)
-      thing = find_by_name(name)
-      if !thing 
-        thing = create(name)
+      if self.find_by_name(name) = nil
+        self.create(name)
+      else
+        self.find_by_name(name)
       end
-      thing
     end
   end
 end
