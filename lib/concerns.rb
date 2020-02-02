@@ -1,15 +1,15 @@
 module Concerns
   module Findable
     def find_by_name(name)
-      all.find {|i| i.name == name}
+      all.find {|thing| thing.name == name}
     end
 
     def find_or_create_by_name(name)
-      i = find_by_name(name)
-      if !i
-        i = create(name)
+      thing = find_by_name(name)
+      if !thing 
+        thing = create(name)
       end
-      i
+      thing
     end
   end
 end
