@@ -15,7 +15,7 @@ class Artist
 
   def add_song(song_name)
     return if song.artist
-    @songs << song
+    @songs << song_name
     song.artist = self
     
   end
