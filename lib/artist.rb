@@ -17,7 +17,7 @@ class Artist
     if song_name.artist != self
         song_name.artist = self
         @songs << song_name
-      end
+    end
   end
 
   def genres
