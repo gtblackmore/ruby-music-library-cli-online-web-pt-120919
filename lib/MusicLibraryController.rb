@@ -1,4 +1,4 @@
-require "music_importer"
+require "MusicImporter"
 
 class MusicLibraryController
   def initialize(path = "./db/mp3s")
