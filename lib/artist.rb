@@ -1,3 +1,5 @@
+require "concerns"
+
 class Artist
     attr_accessor :name, :songs
 
