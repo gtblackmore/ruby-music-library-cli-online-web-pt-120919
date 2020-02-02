@@ -1,4 +1,5 @@
-require "MusicImporter.rb"
+require "MusicImporter"
+
 class MusicLibraryController
     def initialize(path = "./db/mp3s")
       MusicImporter.new(path).import()
