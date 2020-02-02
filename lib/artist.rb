@@ -21,10 +21,10 @@ class Artist
   end
 
   def genres
-    artist_genre = []
+    catalog = []
 
     songs.each do |song|
-      artist_genre << song.genre if !artist_genre.include?(song.genre)
+      catalog << song.genre if !catalog.include?(song.genre)
     end
 
     collection
