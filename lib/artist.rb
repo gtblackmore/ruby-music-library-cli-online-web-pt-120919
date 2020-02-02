@@ -14,10 +14,10 @@ class Artist
   end
 
   def add_song(song)
-    return if song.artist
-    @songs << song
-    song.artist = self
-
+    if song_name.artist != self
+        song_name.artist = self
+        @songs << song_name
+      end
   end
 
   def genres
