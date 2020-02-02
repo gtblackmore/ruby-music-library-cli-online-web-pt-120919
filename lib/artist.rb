@@ -14,10 +14,10 @@ class Artist
   end
 
   def add_song(song_name)
-    if song_name.artist != self
+    return if song_name.artist = self
         song_name.artist = self
         @songs << song_name
-    end
+    
   end
 
   def genres
