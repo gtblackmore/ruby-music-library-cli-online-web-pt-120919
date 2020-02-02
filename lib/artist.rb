@@ -13,9 +13,10 @@ class Artist
     save
   end
 
-  def add_song(song_name) return if song_name.artist == self
-        song_name.artist = self
-        @songs << song_name
+  def add_song(song_name)
+    return if song.artist
+    @songs << song
+    song.artist = self
     
   end
 
