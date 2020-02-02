@@ -24,7 +24,7 @@ class Artist
     artist_genre = []
 
     songs.each do |song|
-      artist_genre << song.genre if !collection.include?(song.genre)
+      artist_genre << song.genre if !artist_genre.include?(song.genre)
     end
 
     collection
