@@ -23,10 +23,8 @@ class Artist
   def genres
     artist_genres = []
 
-    songs.each do |song|
-      artist_genres << song.genre if !artist_genres.include?(song.genre)
-    end
-
+    songs.each{|song| artist_genres << song.genre if !artist_genres.include?(song.genre)}
+    
     artist_genres
   end
 
