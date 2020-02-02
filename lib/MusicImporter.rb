@@ -8,7 +8,7 @@ class MusicImporter
   def files()
     files = Dir["#{@path}/*.mp3"]
     files.collect{|file| file.slice!("#{@path}/")}
-    file
+    files
   end
 
   def import 
