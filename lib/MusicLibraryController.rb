@@ -91,4 +91,4 @@ class MusicLibraryController
       sorted = Song.all.sort{ |a, b| a.name <=> b.name }
       puts "Playing #{sorted[song_number-1].name} by #{sorted[song_number-1].artist.name}" if song_number < sorted.length && song_number > 0
     end
-  end
+end
