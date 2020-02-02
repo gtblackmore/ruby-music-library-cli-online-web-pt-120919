@@ -37,24 +37,18 @@ class MusicLibraryController
   end
 
   def list_songs
-    sorted = Song.all.sort{ |a, b| a.name <=> b.name }
-    sorted.each_with_index do |song, i|
-      puts "#{i+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
-    end
+    sorted = Song.all.sort{|a, b| a.name <=> b.name}
+    sorted.each_with_index{|song, i| puts "#{i+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
   end
 
   def list_artists
-    sorted = Artist.all.sort{ |a, b| a.name <=> b.name }
-    sorted.each_with_index do |artist, i|
-      puts "#{i+1}. #{artist.name}"
-    end
+    sorted = Artist.all.sort{|a, b| a.name <=> b.name}
+    sorted.each_with_index{|artist, i| puts "#{i+1}. #{artist.name}"}
   end
 
   def list_genres
-    sorted = Genre.all.sort{ |a, b| a.name <=> b.name }
-    sorted.each_with_index do |genre, i|
-      puts "#{i+1}. #{genre.name}"
-    end
+    sorted = Genre.all.sort{|a, b| a.name <=> b.name}
+    sorted.each_with_index{|genre, i| puts "#{i+1}. #{genre.name}"}
   end
 
   def list_songs_by_artist
@@ -62,10 +56,8 @@ class MusicLibraryController
     artist_name = gets.strip
     artist = Artist.find_by_name(artist_name)
     return if !artist
-    sorted = artist.songs.sort{ |a, b| a.name <=> b.name }
-    sorted.each_with_index do |song, i|
-      puts "#{i+1}. #{song.name} - #{song.genre.name}"
-    end
+    sorted = artist.songs.sort{|a, b| a.name <=> b.name}
+    sorted.each_with_index{|song, i| puts "#{i+1}. #{song.name} - #{song.genre.name}"}
   end
 
   def list_songs_by_genre
